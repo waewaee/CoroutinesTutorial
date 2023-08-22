@@ -13,11 +13,7 @@
         android:theme="@style/MyTheme"
         tools:targetApi="31">
         <activity
-            android:name=".ui.base.SampleActivity"
-            android:exported="false"
-            android:theme="@style/MyTheme"/>
-        <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/MyTheme">
