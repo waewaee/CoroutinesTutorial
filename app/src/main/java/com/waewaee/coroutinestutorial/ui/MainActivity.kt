@@ -10,6 +10,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withTimeout
 
 class MainActivity : BaseActivity<ActivityMainBinding>(inflate = ActivityMainBinding::inflate) {
 
@@ -20,17 +21,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>(inflate = ActivityMainBin
 
         val job = GlobalScope.launch(Dispatchers.Default) {
             Log.d(TAG, "Starting long running calculation.....")
-            for(i in 30..40) {
-                if (isActive) {
-                    Log.d(TAG, "Result for i = $i : ${fib(i)}")
+            withTimeout(3000L) {
+                for(i in 30..40) {
+                    if (isActive) {
+                        Log.d(TAG, "Result for i = $i : ${fib(i)}")
+                    }
                 }
+                Log.d(TAG, "Ending long running calculation.....")
             }
-            Log.d(TAG, "Ending long running calculation.....")
-        }
-        runBlocking {
-            delay(2000L)
-            job.cancel()
-            Log.d(TAG, "Cancelled job!")
         }
 
     }
