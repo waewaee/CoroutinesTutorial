@@ -7,6 +7,7 @@ import com.waewaee.coroutinestutorial.ui.base.BaseActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
@@ -20,7 +21,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>(inflate = ActivityMainBin
         val job = GlobalScope.launch(Dispatchers.Default) {
             Log.d(TAG, "Starting long running calculation.....")
             for(i in 30..40) {
-                Log.d(TAG, "Result for i = $i : ${fib(i)}")
+                if (isActive) {
+                    Log.d(TAG, "Result for i = $i : ${fib(i)}")
+                }
             }
             Log.d(TAG, "Ending long running calculation.....")
         }
