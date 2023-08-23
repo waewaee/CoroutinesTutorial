@@ -24,7 +24,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>(inflate = ActivityMainBin
             }
         }
         runBlocking {
-            job.join()
+            delay(2000L)
+            job.cancel()
             Log.d(TAG, "Main Thread is continuing.....")
         }
 
