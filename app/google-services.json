@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "510692539098",
+    "project_id": "coroutines-tutorial-173ea",
+    "storage_bucket": "coroutines-tutorial-173ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:510692539098:android:071f6ebe99cdf8f6da43e3",
+        "android_client_info": {
+          "package_name": "com.waewaee.coroutinestutorial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "510692539098-v4cicl3g71585t48kkocgki50cin2s9u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUBW6j_yYGQF3Pi_MVLCHn4eeJZUAno74"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "510692539098-v4cicl3g71585t48kkocgki50cin2s9u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
