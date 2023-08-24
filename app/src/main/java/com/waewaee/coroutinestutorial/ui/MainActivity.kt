@@ -29,9 +29,11 @@ class MainActivity : BaseActivity<ActivityMainBinding>(inflate = ActivityMainBin
             .create(MyAPI::class.java)
 
         GlobalScope.launch(Dispatchers.IO) {
-            val comments = api.getComments().await()
-            for (comment in comments) {
-                Log.d(TAG, comment.toString())
+            val response = api.getComments().awaitResponse()
+            if (response.isSuccessful) {
+                for (comment in response.body()!!) {
+                    Log.d(TAG, comment.toString())
+                }
             }
         }
 
