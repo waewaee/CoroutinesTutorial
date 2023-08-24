@@ -20,10 +20,9 @@ data class Person(
 class MainActivity : BaseActivity<ActivityMainBinding>(inflate = ActivityMainBinding::inflate) {
 
     override fun initUi() {
-        setContentView(R.layout.activity_main)
 
         val tutorialDocument = Firebase.firestore.collection("coroutines")
-            .document("toturial")
+            .document("tutorial")
 
         val peter = Person("Peter", 25)
 
