@@ -2,6 +2,7 @@ package com.waewaee.coroutinestutorial.ui
 
 import android.content.Intent
 import android.util.Log
+import androidx.lifecycle.lifecycleScope
 import com.waewaee.coroutinestutorial.R
 import com.waewaee.coroutinestutorial.databinding.ActivityMainBinding
 import com.waewaee.coroutinestutorial.ui.base.BaseActivity
@@ -17,7 +18,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(inflate = ActivityMainBin
         setContentView(R.layout.activity_main)
 
         binding.btnStartActivity.setOnClickListener {
-            GlobalScope.launch {
+            lifecycleScope.launch {
                 while (true) {
                     delay(1000L)
                     Log.d(TAG, "Still running.....")

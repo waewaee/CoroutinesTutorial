@@ -1,6 +1,5 @@
 package com.waewaee.coroutinestutorial.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.waewaee.coroutinestutorial.R
 import com.waewaee.coroutinestutorial.databinding.ActivitySecondBinding
