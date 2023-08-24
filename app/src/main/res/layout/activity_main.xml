@@ -8,11 +8,11 @@
     android:background="@color/purple_200"
     tools:context=".ui.MainActivity">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvDummy"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnStartActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello from main activity"
+        android:text="Start Activity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
